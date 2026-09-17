@@ -1,0 +1,663 @@
+[
+  {
+    "id": "tony_stark_base",
+    "lineageId": "iron_man",
+    "name": "Tony Stark",
+    "subtitle": "The Futurist",
+    "character": "Iron Man",
+    "theme": {
+      "primary": "#AA0505",
+      "secondary": "#F5C542",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 40,
+      "power": 3,
+      "defense": 3,
+      "speed": 4
+    },
+    "passives": [
+      {
+        "id": "genius_engineer",
+        "name": "Genius Engineer",
+        "description": "Tony may interact with Tech and Gear effects that normally require an engineering-capable character."
+      },
+      {
+        "id": "always_improving",
+        "name": "Always Improving",
+        "description": "Effects that upgrade or modify Tony may retain benefits when he evolves if the new card permits them."
+      }
+    ],
+    "activeAbility": {
+      "id": "improvise",
+      "name": "Improvise",
+      "description": "Once per turn, Tony may manipulate, examine or repurpose a compatible Tech effect in play."
+    },
+    "description": "A brilliant engineer with an enormous ego, extraordinary resources and absolutely no armour protecting him yet.",
+    "flavorText": "Give him enough time and eventually the problem becomes a prototype.",
+    "tags": [
+      "human",
+      "engineer",
+      "genius",
+      "tech"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/th_avengers_12488_12491_12540_12539_12473_12479_12540_1_50a91701.jpeg?region=0%2C0%2C800%2C800"
+  },
+  {
+    "id": "steve_rogers_base",
+    "lineageId": "captain_america",
+    "name": "Steve Rogers",
+    "subtitle": "The Little Guy",
+    "character": "Captain America",
+    "theme": {
+      "primary": "#1E4F91",
+      "secondary": "#C8202F",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 20,
+      "power": 1,
+      "defense": 2,
+      "speed": 3
+    },
+    "passives": [
+      {
+        "id": "indomitable",
+        "name": "Indomitable",
+        "description": "Steve cannot be forced to surrender while another allied character remains active."
+      },
+      {
+        "id": "the_little_guy",
+        "name": "The Little Guy",
+        "description": "Effects triggered by protecting, assisting or standing against a stronger opponent may treat Steve as eligible regardless of his current form."
+      }
+    ],
+    "activeAbility": {
+      "id": "stand_between",
+      "name": "Stand Between",
+      "description": "Once per round, Steve may become the target of an effect aimed at an allied character."
+    },
+    "description": "Physically frail and chronically underestimated, but already possessing the one thing no serum will ever be able to give him.",
+    "flavorText": "Strength was never the part that made him dangerous.",
+    "tags": [
+      "human",
+      "protector",
+      "leader"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://i.pinimg.com/736x/b4/f6/6f/b4f66f4cb93b7e4693da1bee234f9663.jpg"
+  },
+  {
+    "id": "unworthy_thor_base",
+    "lineageId": "thor",
+    "name": "Unworthy Thor",
+    "subtitle": "Son of Odin, Grounded",
+    "character": "Thor",
+    "theme": {
+      "primary": "#3D5A80",
+      "secondary": "#74C7EC",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 70,
+      "power": 6,
+      "defense": 5,
+      "speed": 5
+    },
+    "passives": [
+      {
+        "id": "born_warrior",
+        "name": "Born Warrior",
+        "description": "Thor retains exceptionally strong physical base stats even while stripped of divine power."
+      }
+    ],
+    "activeAbility": {
+      "id": "prove_worthy",
+      "name": "Prove Worthy",
+      "description": "Thor may interact with effects that test Worthiness, sacrifice or selflessness."
+    },
+    "description": "Stripped of his power and separated from his weapon, Thor is temporarily reduced to an unusually large, extremely confused man.",
+    "flavorText": "A god can lose his power long before he learns what made him worthy of it.",
+    "tags": [
+      "humanized",
+      "asgardian",
+      "warrior",
+      "worthiness"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://images.mubicdn.net/images/film/32251/cache-58132-1745491173/image-w1280.jpg?size=800x"
+  },
+  {
+    "id": "bruce_banner_base",
+    "lineageId": "hulk",
+    "name": "Bruce Banner",
+    "subtitle": "Before the Gamma",
+    "character": "Hulk",
+    "theme": {
+      "primary": "#4C8C3F",
+      "secondary": "#6F4A8E",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 40,
+      "power": 3,
+      "defense": 3,
+      "speed": 4
+    },
+    "passives": [
+      {
+        "id": "brilliant_scientist",
+        "name": "Brilliant Scientist",
+        "description": "Bruce may interact with Science effects and scientific conditions that other characters cannot."
+      },
+      {
+        "id": "latent_rage",
+        "name": "Latent Rage",
+        "description": "Damage, stress and anger effects applied to Bruce may be referenced by future Hulk evolutions."
+      }
+    ],
+    "activeAbility": {
+      "id": "analyse",
+      "name": "Analyse",
+      "description": "Bruce may examine one active scientific, radiation or transformation effect each turn."
+    },
+    "description": "A gifted physicist whose greatest contribution to brute-force combat currently involves knowing quite a lot about gamma radiation.",
+    "flavorText": "For now, the monster exists only as a possibility.",
+    "tags": [
+      "human",
+      "scientist",
+      "genius",
+      "gamma"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://imgix.ranker.com/user_node_img/50095/1001891677/original/spit-it-out-photo-u1?auto=format&dpr=2&fit=crop&fm=pjpg&q=60&w=355"
+  },
+  {
+    "id": "natasha_romanoff_base",
+    "lineageId": "black_widow",
+    "name": "Natasha Romanoff",
+    "subtitle": "Red Room Operative",
+    "character": "Black Widow",
+    "theme": {
+      "primary": "#171717",
+      "secondary": "#B11226",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 50,
+      "power": 5,
+      "defense": 5,
+      "speed": 7
+    },
+    "passives": [
+      {
+        "id": "trained_observer",
+        "name": "Trained Observer",
+        "description": "Natasha may gain information from hidden, concealed or unrevealed game elements when another effect permits scouting."
+      },
+      {
+        "id": "infiltrator",
+        "name": "Infiltrator",
+        "description": "Natasha may interact with espionage, infiltration and sabotage objectives regardless of her current evolution."
+      },
+      {
+        "id": "misdirection",
+        "name": "Misdirection",
+        "description": "Effects that reward deception or manipulating an opponent's choices may reference Natasha as an eligible character."
+      }
+    ],
+    "activeAbility": {
+      "id": "read_the_room",
+      "name": "Read the Room",
+      "description": "Once per round, inspect one piece of information normally hidden from you if another game effect has made it partially observable."
+    },
+    "description": "No armour, no super serum and no divine weapon - merely an exceptionally dangerous human trained to win before the fight becomes fair.",
+    "flavorText": "The easiest fight to survive is the one your opponent never realised had started.",
+    "tags": [
+      "human",
+      "spy",
+      "infiltrator",
+      "red_room"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNjM1NjhkNTUtY2QzNi00OGE2LTlhYzMtMjRlY2Q0OTI5NmU5XkEyXkFqcGc%40._V1_.jpg"
+  },
+  {
+    "id": "clint_barton_base",
+    "lineageId": "hawkeye",
+    "name": "Clint Barton",
+    "subtitle": "The Marksman",
+    "character": "Hawkeye",
+    "theme": {
+      "primary": "#4B2E83",
+      "secondary": "#BFA7E8",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 50,
+      "power": 5,
+      "defense": 4,
+      "speed": 6
+    },
+    "passives": [
+      {
+        "id": "perfect_aim",
+        "name": "Perfect Aim",
+        "description": "Clint may receive additional benefits from future Precision and Ranged effects."
+      },
+      {
+        "id": "patient_hunter",
+        "name": "Patient Hunter",
+        "description": "Effects that reward waiting, preparing or selecting a target may treat Clint as specially eligible."
+      }
+    ],
+    "activeAbility": {
+      "id": "mark_target",
+      "name": "Mark Target",
+      "description": "Choose one opposing character as Clint's marked target until you choose another."
+    },
+    "description": "A highly trained field operative whose most famous weapon has not yet been placed in his hands.",
+    "flavorText": "He only needs the target to make one mistake.",
+    "tags": [
+      "human",
+      "marksman",
+      "agent",
+      "precision"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/renner-hawkeye-1636562028.png?crop=0.527xw%3A1.00xh%3B0.293xw%2C0&resize=1200%3A%2A"
+  },
+  {
+    "id": "james_rhodes_base",
+    "lineageId": "war_machine",
+    "name": "James Rhodes",
+    "subtitle": "Air Force Colonel",
+    "character": "War Machine",
+    "theme": {
+      "primary": "#474C52",
+      "secondary": "#C5CBD1",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 60,
+      "power": 5,
+      "defense": 5,
+      "speed": 5
+    },
+    "passives": [
+      {
+        "id": "military_training",
+        "name": "Military Training",
+        "description": "Rhodey may fully utilise Military Gear and weapons that require trained personnel."
+      }
+    ],
+    "activeAbility": {
+      "id": "coordinate",
+      "name": "Coordinate",
+      "description": "Choose one allied character. Effects representing coordinated or tactical actions may treat that ally as linked with Rhodey until his next turn."
+    },
+    "description": "An experienced military officer with impeccable training and, at this point, absolutely none of Tony Stark's toys.",
+    "flavorText": "Eventually someone has to bring military doctrine to the flying robot suit.",
+    "tags": [
+      "human",
+      "military",
+      "pilot",
+      "officer"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/7/77/WarMachine-EndgameProfile.jpg/revision/latest?cb=20231025163822"
+  },
+  {
+    "id": "sam_wilson_base",
+    "lineageId": "falcon",
+    "name": "Sam Wilson",
+    "subtitle": "Pararescueman",
+    "character": "Falcon",
+    "theme": {
+      "primary": "#8C2633",
+      "secondary": "#D9DDE1",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 60,
+      "power": 5,
+      "defense": 5,
+      "speed": 6
+    },
+    "passives": [
+      {
+        "id": "rescue_training",
+        "name": "Rescue Training",
+        "description": "Sam receives additional interaction options with effects involving extraction, rescue or protecting endangered allies."
+      },
+      {
+        "id": "wingman",
+        "name": "Wingman",
+        "description": "Sam may benefit from effects that reward coordinated actions with another allied character."
+      }
+    ],
+    "activeAbility": {
+      "id": "extract_ally",
+      "name": "Extract Ally",
+      "description": "Once per round, Sam may assist an allied character affected by a positioning or control effect."
+    },
+    "description": "A veteran pararescueman already accustomed to entering terrible situations to bring somebody else home.",
+    "flavorText": "Before the wings came the instinct to go back for someone.",
+    "tags": [
+      "human",
+      "military",
+      "rescue",
+      "veteran"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://i.pinimg.com/originals/d4/5f/23/d45f2379b4dabf091faa635d39325a47.jpg"
+  },
+  {
+    "id": "bucky_barnes_base",
+    "lineageId": "winter_soldier",
+    "name": "Bucky Barnes",
+    "subtitle": "Brooklyn Soldier",
+    "character": "Winter Soldier",
+    "theme": {
+      "primary": "#35424A",
+      "secondary": "#91A3B0",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 60,
+      "power": 6,
+      "defense": 5,
+      "speed": 6
+    },
+    "passives": [
+      {
+        "id": "combat_veteran",
+        "name": "Combat Veteran",
+        "description": "Bucky may efficiently use Military Gear and effects requiring battlefield training."
+      },
+      {
+        "id": "loyal_to_the_end",
+        "name": "Loyal to the End",
+        "description": "Effects involving protecting or supporting Steve Rogers may receive additional interactions when Bucky is active."
+      }
+    ],
+    "activeAbility": {
+      "id": "covering_action",
+      "name": "Covering Action",
+      "description": "Once per round, Bucky may support an allied character performing a tactical action."
+    },
+    "description": "A capable soldier and fiercely loyal friend long before anyone rebuilt him into something more dangerous.",
+    "flavorText": "The machine came later. The soldier was already there.",
+    "tags": [
+      "human",
+      "soldier",
+      "military",
+      "veteran"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://images.squarespace-cdn.com/content/v1/569472270ab3776bee48284e/1562118213718-HYRLDHOBDX2CXEEDBB6V/bucky-barnes-the-winter-soldier-9.jpg"
+  },
+  {
+    "id": "wanda_maximoff_base",
+    "lineageId": "scarlet_witch",
+    "name": "Wanda Maximoff",
+    "subtitle": "Sokovian Survivor",
+    "character": "Scarlet Witch",
+    "theme": {
+      "primary": "#891D3D",
+      "secondary": "#E05473",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 40,
+      "power": 3,
+      "defense": 3,
+      "speed": 5
+    },
+    "passives": [
+      {
+        "id": "survivor",
+        "name": "Survivor",
+        "description": "Wanda may gain benefits from future effects triggered by loss, hardship or surviving damage."
+      },
+      {
+        "id": "latent_potential",
+        "name": "Latent Potential",
+        "description": "Wanda is eligible for exceptionally powerful transformation and ability effects that reference latent supernatural potential."
+      }
+    ],
+    "activeAbility": null,
+    "description": "A young Sokovian carrying extraordinary potential that has not yet become something she understands or controls.",
+    "flavorText": "Some power announces itself. Some waits.",
+    "tags": [
+      "human",
+      "sokovian",
+      "latent_power"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://cdn.mos.cms.futurecdn.net/Y3BFQCKuapskGLfYVjFke3-1200-80.jpg"
+  },
+  {
+    "id": "vision_base",
+    "lineageId": "vision",
+    "name": "Deconstructed Vision",
+    "subtitle": "Some Assembly Required",
+    "character": "Vision",
+    "theme": {
+      "primary": "#9B2335",
+      "secondary": "#D5AF54",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 20,
+      "power": 1,
+      "defense": 2,
+      "speed": 1
+    },
+    "passives": [
+      {
+        "id": "synthetic_potential",
+        "name": "Synthetic Potential",
+        "description": "Vision may receive Synthetic, AI and advanced-material evolution effects despite not yet being an active combatant."
+      },
+      {
+        "id": "empty_vessel",
+        "name": "Empty Vessel",
+        "description": "Effects involving artificial intelligence, synthetic bodies or the Mind Stone may use Vision as a valid host."
+      }
+    ],
+    "activeAbility": null,
+    "description": "A collection of astonishingly advanced components which, at present, has all the battlefield utility of expensive furniture.",
+    "flavorText": "Technically, most people also begin as a pile of ingredients.",
+    "tags": [
+      "synthetic",
+      "inactive",
+      "ai",
+      "mind_stone_compatible"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://conteudo.imguol.com.br/c/entretenimento/2015/05/08/paul-bettany-como-visao-em-vingadores-era-de-ultron-1431127943451_v2_1x1.jpg"
+  },
+  {
+    "id": "scott_lang_base",
+    "lineageId": "ant_man",
+    "name": "Scott Lang",
+    "subtitle": "Second-Story Man",
+    "character": "Ant-Man",
+    "theme": {
+      "primary": "#B21F32",
+      "secondary": "#AEB8C2",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 50,
+      "power": 4,
+      "defense": 4,
+      "speed": 5
+    },
+    "passives": [
+      {
+        "id": "burglar",
+        "name": "Burglar",
+        "description": "Scott may interact with infiltration, theft and bypass effects that reward unconventional access."
+      },
+      {
+        "id": "improviser",
+        "name": "Improviser",
+        "description": "Scott may benefit from future effects involving unconventional solutions or repurposed technology."
+      }
+    ],
+    "activeAbility": {
+      "id": "break_in",
+      "name": "Break In",
+      "description": "Once per round, Scott may attempt to bypass a non-character obstacle or defensive effect."
+    },
+    "description": "An electrical engineer, talented burglar and devoted father who has not yet encountered the world's least sensibly regulated shrinking technology.",
+    "flavorText": "Every impossible fortress eventually has a way in.",
+    "tags": [
+      "human",
+      "engineer",
+      "burglar",
+      "infiltrator"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://image.idntimes.com/post/20230111/scott-lang-ant-manant-man-539e7a5b1ef6054927c81b070bc681e7.jpg"
+  },
+  {
+    "id": "peter_parker_base",
+    "lineageId": "spider_man",
+    "name": "Peter Parker",
+    "subtitle": "Queens Kid",
+    "character": "Spider-Man",
+    "theme": {
+      "primary": "#C1121F",
+      "secondary": "#1D4ED8",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 30,
+      "power": 2,
+      "defense": 2,
+      "speed": 5
+    },
+    "passives": [
+      {
+        "id": "gifted_student",
+        "name": "Gifted Student",
+        "description": "Peter may interact with Science and Tech effects requiring exceptional technical aptitude."
+      },
+      {
+        "id": "great_power_waiting",
+        "name": "Great Power Waiting",
+        "description": "Peter is eligible for Spider transformation effects that radically modify his base statistics."
+      }
+    ],
+    "activeAbility": {
+      "id": "science_project",
+      "name": "Science Project",
+      "description": "Peter may examine or interact with one Science or Tech effect each turn."
+    },
+    "description": "A brilliant but otherwise ordinary teenager from Queens immediately before his life becomes considerably less ordinary.",
+    "flavorText": "Right now the greatest danger in his life is probably homework.",
+    "tags": [
+      "human",
+      "student",
+      "science",
+      "tech"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://i1.sndcdn.com/avatars-K0gNw4lDIk2wK8eU-UycBVQ-t1080x1080.jpg"
+  },
+  {
+    "id": "stephen_strange_base",
+    "lineageId": "doctor_strange",
+    "name": "Stephen Strange",
+    "subtitle": "Master Surgeon",
+    "character": "Doctor Strange",
+    "theme": {
+      "primary": "#293A67",
+      "secondary": "#B51D34",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 40,
+      "power": 3,
+      "defense": 3,
+      "speed": 4
+    },
+    "passives": [
+      {
+        "id": "photographic_mind",
+        "name": "Photographic Mind",
+        "description": "Stephen may gain additional interactions with effects involving study, learning, complex knowledge or discovering new abilities."
+      },
+      {
+        "id": "obsessive_mastery",
+        "name": "Obsessive Mastery",
+        "description": "Effects that reward repeated study or mastering difficult techniques may progress more effectively on Stephen."
+      }
+    ],
+    "activeAbility": {
+      "id": "diagnose",
+      "name": "Diagnose",
+      "description": "Inspect one condition affecting a character and reveal all currently visible information about that condition."
+    },
+    "description": "One of the world's finest surgeons, possessing extraordinary hands, extraordinary intelligence and absolutely no idea magic exists.",
+    "flavorText": "He has spent his life mastering one impossible discipline. Another is waiting.",
+    "tags": [
+      "human",
+      "doctor",
+      "genius",
+      "scholar"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/b/b2/Doctor_Strange_MoM_Profile.jpeg/revision/latest?cb=20231021153337"
+  },
+  {
+    "id": "tchalla_base",
+    "lineageId": "black_panther",
+    "name": "T'Challa",
+    "subtitle": "Prince of Wakanda",
+    "character": "Black Panther",
+    "theme": {
+      "primary": "#211A2C",
+      "secondary": "#7657FF",
+      "text": "#FFFFFF"
+    },
+    "stats": {
+      "hp": 60,
+      "power": 6,
+      "defense": 6,
+      "speed": 7
+    },
+    "passives": [
+      {
+        "id": "warrior_prince",
+        "name": "Warrior Prince",
+        "description": "T'Challa may interact with advanced combat training, leadership and Wakandan effects even without Panther enhancements."
+      },
+      {
+        "id": "wakandan_heir",
+        "name": "Wakandan Heir",
+        "description": "T'Challa is eligible for restricted Wakandan Gear, rituals and lineage effects."
+      }
+    ],
+    "activeAbility": {
+      "id": "command",
+      "name": "Command",
+      "description": "Choose one allied character. Until T'Challa's next turn, that character may be treated as participating in a coordinated action with him."
+    },
+    "description": "A prince raised among the most advanced people on Earth, already a formidable fighter before ritual or vibranium transforms his role.",
+    "flavorText": "The suit does not make the king.",
+    "tags": [
+      "human",
+      "wakandan",
+      "royalty",
+      "warrior",
+      "leader"
+    ],
+    "evolvesInto": [],
+    "imageUrl": "https://i.pinimg.com/736x/c8/a5/ab/c8a5ab53d48e4476afba62cc1080204a.jpg"
+  }
+]
