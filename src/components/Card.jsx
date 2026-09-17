@@ -16,7 +16,15 @@ const statLabels = {
   },
 }
 
-function CharacterCard({ character }) {
+function CharacterCard({
+  character,
+  animationDelay = '0ms',
+  className = '',
+  muted = false,
+  onClick,
+  selected = false,
+  variant = 'default',
+}) {
   const { theme, stats } = character
   const [tooltipSide, setTooltipSide] = useState('right')
   const [tooltipVertical, setTooltipVertical] = useState('middle')
@@ -24,6 +32,7 @@ function CharacterCard({ character }) {
     '--card-primary': theme.primary,
     '--card-secondary': theme.secondary,
     '--card-text': theme.text,
+    animationDelay,
   }
 
   function updateTooltipPlacement(event) {
@@ -33,7 +42,7 @@ function CharacterCard({ character }) {
     const spaceAbove = rect.top
 
     setTooltipSide(hasMoreRoomOnLeft ? 'left' : 'right')
-    setTooltipVertical(spaceBelow < 360 && spaceAbove > spaceBelow ? 'top' : 'middle')
+    setTooltipVertical(variant === 'draft' ? 'middle' : spaceBelow < 360 && spaceAbove > spaceBelow ? 'top' : 'middle')
   }
 
   const opensLeft = tooltipSide === 'left'
@@ -53,31 +62,48 @@ function CharacterCard({ character }) {
     : opensLeft
       ? 'top-full left-0 right-0 h-3 md:left-auto md:right-full md:top-0 md:h-full md:w-4'
       : 'top-full left-0 right-0 h-3 md:left-full md:right-auto md:top-0 md:h-full md:w-4'
+  const variantClass = `character-card character-card--${variant}`
+  const interactiveClass = onClick ? 'cursor-pointer active:scale-[0.98]' : ''
+  const selectedClass = selected ? 'ring-2 ring-amber-300 ring-offset-2 ring-offset-zinc-950' : ''
+  const mutedClass = muted ? 'opacity-45 grayscale' : ''
+
+  function handleKeyDown(event) {
+    if (!onClick || (event.key !== 'Enter' && event.key !== ' ')) {
+      return
+    }
+
+    event.preventDefault()
+    onClick()
+  }
 
   return (
     <article
-      className="group relative z-0 h-[17.5rem] w-[12.5rem] shrink-0 overflow-visible rounded-lg bg-zinc-950 p-[2px] shadow-2xl shadow-zinc-950/25 transition duration-300 hover:z-30 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(0,0,0,0.35)] focus:z-30 focus:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white/70"
+      className={`group relative z-0 w-[var(--card-width)] shrink-0 overflow-visible rounded-lg bg-zinc-950 p-[2px] shadow-2xl shadow-zinc-950/25 transition duration-300 hover:z-30 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(0,0,0,0.35)] focus:outline-none focus-visible:z-30 focus-visible:-translate-y-1 focus-visible:ring-2 focus-visible:ring-white/70 ${variantClass} ${interactiveClass} ${selectedClass} ${mutedClass} ${className}`}
       style={cardStyle}
       tabIndex={0}
+      role={onClick ? 'button' : undefined}
+      aria-pressed={onClick ? selected : undefined}
+      onClick={onClick}
+      onKeyDown={handleKeyDown}
       onFocus={updateTooltipPlacement}
       onMouseEnter={updateTooltipPlacement}
     >
       <div className="pointer-events-none absolute inset-0 rounded-lg bg-[linear-gradient(135deg,var(--card-primary),var(--card-secondary)_52%,var(--card-primary))]" />
-      <div className="pointer-events-none absolute -right-14 -top-16 size-40 rounded-full bg-white/25 blur-3xl transition duration-500 group-hover:scale-125 group-focus:scale-125" />
+      <div className="pointer-events-none absolute -right-14 -top-16 size-40 rounded-full bg-white/25 blur-3xl transition duration-500 group-hover:scale-125 group-focus-visible:scale-125" />
 
       <div className="relative flex h-full flex-col overflow-hidden rounded-[7px] border border-white/20 bg-zinc-950 text-white">
-        <header className="relative h-14 shrink-0 p-2 text-[color:var(--card-text)]">
+        <header className="card-header relative shrink-0 text-[color:var(--card-text)]">
           <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--card-primary),var(--card-secondary))] opacity-95" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.34),transparent_40%)]" />
           <div className="relative flex items-start justify-between gap-2">
             <div className="min-w-0">
-              <p className="truncate text-[0.5rem] font-black uppercase tracking-[0.14em] opacity-80">{character.character}</p>
-              <h2 className="mt-0.5 truncate text-sm font-black leading-tight tracking-normal">{character.name}</h2>
-              <p className="truncate text-[0.58rem] font-bold opacity-90">{character.subtitle}</p>
+              <p className="card-eyebrow truncate font-black uppercase tracking-[0.14em] opacity-80">{character.character}</p>
+              <h2 className="card-title truncate font-black tracking-normal">{character.name}</h2>
+              <p className="card-subtitle truncate font-bold opacity-90">{character.subtitle}</p>
             </div>
-            <div className="flex shrink-0 items-center gap-1 rounded-full border border-white/70 bg-black/40 px-1.5 py-1 shadow-lg backdrop-blur">
-              <HeartPulse className="size-3" aria-hidden="true" />
-              <span className="text-xs font-black leading-none">{stats.hp}</span>
+            <div className="card-hp-badge flex shrink-0 items-center rounded-full border border-white/70 bg-black/40 shadow-lg backdrop-blur">
+              <HeartPulse className="card-hp-icon" aria-hidden="true" />
+              <span className="card-hp-text font-black leading-none">{stats.hp}</span>
             </div>
           </div>
         </header>
@@ -90,34 +116,34 @@ function CharacterCard({ character }) {
             alt={character.name}
           />
           <div className="absolute bottom-2 left-2 right-2 z-20">
-            <p className="truncate text-[0.58rem] font-black uppercase tracking-[0.14em] text-white/90">
+            <p className="card-tags-line truncate font-black uppercase tracking-[0.14em] text-white/90">
               {character.tags.slice(0, 3).join(' / ').replaceAll('_', ' ')}
             </p>
           </div>
         </div>
 
-        <div className="grid h-14 shrink-0 grid-cols-3 gap-px bg-white/15">
+        <div className="card-stat-row grid shrink-0 grid-cols-3 gap-px bg-white/15">
           {Object.entries(statLabels).map(([stat, config]) => {
             const Icon = config.icon
 
             return (
-              <div key={stat} className="bg-zinc-950 px-1.5 py-2 text-center">
-                <Icon className="mx-auto size-3.5 text-zinc-300" aria-hidden="true" />
-                <span className="mt-1 block text-sm font-black leading-none text-white">{stats[stat]}</span>
-                <span className="mt-0.5 block text-[0.46rem] font-black uppercase tracking-[0.08em] text-zinc-500">{config.shortLabel}</span>
+              <div key={stat} className="card-stat-cell bg-zinc-950 text-center">
+                <Icon className="card-stat-icon mx-auto text-zinc-300" aria-hidden="true" />
+                <span className="card-stat-value block font-black leading-none text-white">{stats[stat]}</span>
+                <span className="card-stat-label block font-black uppercase tracking-[0.08em] text-zinc-500">{config.shortLabel}</span>
               </div>
             )
           })}
         </div>
       </div>
 
-      <div className={`pointer-events-none absolute z-30 bg-transparent group-hover:pointer-events-auto group-focus:pointer-events-auto ${hoverBridge}`} />
+      <div className={`pointer-events-none absolute z-30 bg-transparent group-hover:pointer-events-auto group-focus-visible:pointer-events-auto ${hoverBridge}`} />
 
       <aside
-        className={`pointer-events-none absolute z-40 w-[18rem] scale-95 rounded-lg border border-white/15 bg-zinc-950/96 text-white opacity-0 shadow-2xl shadow-black/50 backdrop-blur transition duration-200 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 group-focus:pointer-events-auto group-focus:scale-100 group-focus:opacity-100 ${tooltipPosition}`}
+        className={`pointer-events-none absolute z-40 w-[min(18rem,calc(100vw-2rem))] scale-95 rounded-lg border border-white/15 bg-zinc-950/96 text-white opacity-0 shadow-2xl shadow-black/50 backdrop-blur transition duration-200 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 group-focus-visible:pointer-events-auto group-focus-visible:scale-100 group-focus-visible:opacity-100 ${tooltipPosition}`}
       >
         <div className={`pointer-events-none absolute size-4 rotate-45 border-white/15 bg-zinc-950/96 ${tooltipArrow}`} />
-        <div className="relative max-h-[min(22rem,calc(100vh-2rem))] overflow-y-auto overflow-x-hidden p-3">
+        <div className="relative max-h-[min(22rem,calc(100vh-2rem))] overflow-hidden p-3">
           <div className="space-y-3">
             <p className="text-xs font-semibold leading-5 text-zinc-200">{character.description}</p>
 
